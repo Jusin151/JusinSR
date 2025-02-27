@@ -6,7 +6,8 @@
 /* 리스트들로 보관한다. 리스트 == 객체들 == 내가 나누고 싶은 기준에따라 그룹짓는다. */
 
 BEGIN(Engine)
-
+class CGameInstance;
+class CLayer;
 class CObject_Manager final : public CBase
 {
 private:
@@ -19,13 +20,13 @@ public:
 	void Priority_Update(_float fTimeDelta);
 	void Update(_float fTimeDelta);
 	void Late_Update(_float fTimeDelta);
-private:	
-	_uint								m_iNumLevels = {};
-	map<const _wstring, class CLayer*>* m_pLayers = { nullptr };
-	class CGameInstance*				m_pGameInstance = { nullptr };
+private:
+	_uint m_iNumLevels = {};
+	vector<map<const _wstring, CLayer*>> m_vecLayers;
+	CGameInstance* m_pGameInstance = { nullptr };
 
 private:
-	class CLayer* Find_Layer(_uint iLevelIndex, const _wstring& strLayerTag);
+	CLayer* Find_Layer(_uint iLevelIndex, const _wstring& strLayerTag);
 
 public:
 	static CObject_Manager* Create(_uint iNumLevels);

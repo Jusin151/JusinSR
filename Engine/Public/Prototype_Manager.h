@@ -20,7 +20,7 @@ public:
 	CBase* Clone_Prototype(PROTOTYPE ePrototypeType, _uint iPrototypeLevelIndex, const _wstring& strPrototypeTag, void* pArg);
 private:
 	_uint										m_iNumLevels = {};
-	map<const _wstring, class CBase*>*			m_pPrototypes = { nullptr };
+	vector<map<const _wstring, class CBase*>>			m_vecPrototypes; // 레벨별로 원형을 보관할 벡터
 	typedef map<const _wstring, class CBase*>	PROTOTYPES;
 
 private:

@@ -4,6 +4,7 @@
 /* 기타 다른 정의파일(.h)들을 인클루드하는 역활. */
 #include <Windows.h>
 #include <process.h>
+#include <thread>
 #include "Client_Enum.h"
 
 
