@@ -27,13 +27,13 @@ public:
 	void Output_LoadingText() {
 		SetWindowText(g_hWnd, m_szLoadingText);
 	}
-	
+
 
 private:
 	LPDIRECT3DDEVICE9			m_pGraphic_Device = { nullptr };
 	LEVEL						m_eNextLevelID = { LEVEL_END };
 	_bool						m_isFinished = { false };
-	CGameInstance*				m_pGameInstance = { nullptr };
+	CGameInstance* m_pGameInstance = { nullptr };
 
 private:
 	HANDLE						m_hThread = {};
@@ -43,11 +43,36 @@ private:
 public:
 	HRESULT Loading_For_Logo();
 	HRESULT Loading_For_GamePlay();
+	
 
 
 public:
 	static CLoader* Create(LPDIRECT3DDEVICE9 pGraphic_Device, LEVEL eNextLevelID);
 	virtual void Free() override;
+	//////////////////////////////
+	HRESULT Add_To_Logo_Textures();
+	HRESULT Add_To_Logo_Buffer();
+	HRESULT Add_To_Logo_Transform();
+	HRESULT Add_To_Logo_Prototype();
+
+	HRESULT Add_To_Logo_Menu_Textures();
+	HRESULT Add_To_Logo_Menu_Buffer();
+	HRESULT Add_To_Logo_Menu_Transform();
+	HRESULT Add_To_Logo_Menu_Prototype();
+
+
+	//////////////////////////////
+
+	HRESULT Add_To_GamePlay_Textures();
+	HRESULT Add_To_GamePlay_Buffer();
+	HRESULT Add_To_GamePlay_Transform();
+	HRESULT Add_To_GamePlay_Prototype();
+
+	HRESULT Add_To_UI_Prototype();
+	HRESULT Add_To_UI_Textures();
+	HRESULT Add_To_UI_Buffer();
+	HRESULT Add_To_UI_Transform();
+
 };
 
 END

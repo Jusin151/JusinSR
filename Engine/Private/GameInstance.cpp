@@ -4,6 +4,7 @@
 #include "Level_Manager.h"
 #include "Timer_Manager.h"
 #include "Graphic_Device.h"
+#include "PoolManager.h"
 #include "Object_Manager.h"
 #include "Prototype_Manager.h"
 
@@ -37,6 +38,11 @@ HRESULT CGameInstance::Initialize_Engine(const ENGINE_DESC& EngineDesc, LPDIRECT
 
 	m_pRenderer = CRenderer::Create(*ppOut);
 	if (nullptr == m_pRenderer)
+		return E_FAIL;
+
+
+	m_pPool_Manager = CPool_Manager::Create();
+	if (nullptr == m_pPool_Manager)
 		return E_FAIL;
 
 
@@ -138,21 +144,41 @@ void CGameInstance::Update_Timer(const _wstring& strTimerTag)
 	return m_pTimer_Manager->Update(strTimerTag);
 }
 
+CGameObject* CGameInstance::Acquire_Object(_uint iPrototypeLevelIndex, const _wstring& strLayerTag)
+{
+	return m_pPool_Manager->Acquire_Object(iPrototypeLevelIndex,strLayerTag);
+}
+
+HRESULT CGameInstance::Return_Object(_uint iPrototypeLevelIndex, const _wstring& strLayerTag, CGameObject* pGameObject)
+{
+	return  m_pPool_Manager->Return_Object(iPrototypeLevelIndex,strLayerTag,pGameObject);
+}
+
+HRESULT CGameInstance::Reserve_Pool(_uint iPrototypeLevelIndex, const _wstring& strPrototypeTag, const _wstring& strLayerTag, _uint iCount, void* pArg)
+{
+	return  m_pPool_Manager->Reserve_Pool(iPrototypeLevelIndex,strPrototypeTag,strLayerTag,iCount,pArg);
+}
+
 #pragma endregion
 
 void CGameInstance::Release_Engine()
 {
+
 	Safe_Release(m_pTimer_Manager);
 
 	Safe_Release(m_pRenderer);
 
+
 	Safe_Release(m_pObject_Manager);
+	
+	Safe_Release(m_pPool_Manager);
 
 	Safe_Release(m_pPrototype_Manager);
 
 	Safe_Release(m_pLevel_Manager);
 
 	Safe_Release(m_pGraphic_Device);
+
 
 	Destroy_Instance();
 }

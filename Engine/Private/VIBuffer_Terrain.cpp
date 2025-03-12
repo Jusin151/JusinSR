@@ -40,10 +40,19 @@ HRESULT CVIBuffer_Terrain::Initialize_Prototype(_uint iNumVerticesX, _uint iNumV
 		{
 			_uint			iIndex = i * m_iNumVerticesX + j;
 
-			pVertices[iIndex].vPosition = _float3(j, 0.f, i);
+			if (j > m_iNumVerticesX / 2)
+			{
+				pVertices[iIndex].vPosition = _float3(j, 10.f, i);
+			} else
+			{
+				pVertices[iIndex].vPosition = _float3(j, 0.f, i);
+			}
+			
 			pVertices[iIndex].vTexcoord = _float2(j / (m_iNumVerticesX - 1.f), i / (m_iNumVerticesZ - 1.f));
 		}
-	}	
+	}
+
+
 
 	m_pVB->Unlock();
 #pragma endregion

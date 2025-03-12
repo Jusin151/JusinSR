@@ -114,13 +114,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../Public/;../../EngineSDK/Inc/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../Public/;../../EngineSDK/Inc/;$(SolutionDir)External Libraries\imgui;$(SolutionDir)External Libraries\imgui\backends;$(SolutionDir)External Libraries\fmod\core\inc;$(SolutionDir)External Libraries\fsbank\core\inc;$(SolutionDir)External Libraries\studio\core\inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Engine.lib;d3dx9.LIB;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../EngineSDK/Lib/</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine.lib;d3dx9.LIB;fmodstudio_vc.lib;fsbank_vc.lib;fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../EngineSDK/Lib/;$(SolutionDir)External Libraries\fmod\core\lib\x64;$(SolutionDir)External Libraries\fmod\fsbank\lib\x64;$(SolutionDir)External Libraries\fmod\studio\lib\x64</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -131,41 +131,90 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../Public/;../../EngineSDK/Inc/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../Public/;../../EngineSDK/Inc/;$(SolutionDir)External Libraries\imgui;$(SolutionDir)External Libraries\imgui\backends;$(SolutionDir)External Libraries\fmod\core\inc;$(SolutionDir)External Libraries\fsbank\core\inc;$(SolutionDir)External Libraries\studio\core\inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Engine.lib;d3dx9.LIB;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../EngineSDK/Lib/</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine.lib;d3dx9.LIB;fmodstudio_vc.lib;fsbank_vc.lib;fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../EngineSDK/Lib/;$(SolutionDir)External Libraries\fmod\core\lib\x64;$(SolutionDir)External Libraries\fmod\fsbank\lib\x64;$(SolutionDir)External Libraries\fmod\studio\lib\x64</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\External Libraries\imgui\backends\imgui_impl_dx9.h" />
+    <ClInclude Include="..\..\External Libraries\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="..\..\External Libraries\imgui\imconfig.h" />
+    <ClInclude Include="..\..\External Libraries\imgui\imgui.h" />
+    <ClInclude Include="..\..\External Libraries\imgui\imgui_internal.h" />
+    <ClInclude Include="..\..\External Libraries\imgui\imstb_rectpack.h" />
+    <ClInclude Include="..\..\External Libraries\imgui\imstb_textedit.h" />
+    <ClInclude Include="..\..\External Libraries\imgui\imstb_truetype.h" />
     <ClInclude Include="..\public\BackGround.h" />
+    <ClInclude Include="..\public\BackGround_2.h" />
+    <ClInclude Include="..\public\BackGround_3.h" />
+    <ClInclude Include="..\public\BackGround_4.h" />
     <ClInclude Include="..\public\Camera_Free.h" />
     <ClInclude Include="..\public\Client_Defines.h" />
     <ClInclude Include="..\public\Client_Enum.h" />
+    <ClInclude Include="..\public\CUI_AmmoDisplay.h" />
+    <ClInclude Include="..\public\CUI_Base.h" />
+    <ClInclude Include="..\public\CUI_Dialogue.h" />
+    <ClInclude Include="..\public\Default_Menu.h" />
+    <ClInclude Include="..\Public\UI_AMMOBar.h" />
+    <ClInclude Include="..\Public\UI_EXPBar.h" />
+    <ClInclude Include="..\Public\UI_HPBar.h" />
+    <ClInclude Include="..\public\UI_HPDisplay.h" />
+    <ClInclude Include="..\public\CUI_Manager.h" />
+    <ClInclude Include="..\public\CUI_Menu.h" />
+    <ClInclude Include="..\public\CUI_WeaponIcon.h" />
+    <ClInclude Include="..\Public\Exit_Button.h" />
     <ClInclude Include="..\public\Level_GamePlay.h" />
     <ClInclude Include="..\public\Level_Loading.h" />
     <ClInclude Include="..\public\Level_Logo.h" />
     <ClInclude Include="..\public\Loader.h" />
+    <ClInclude Include="..\Public\Loading_UI.h" />
+    <ClInclude Include="..\Public\Start_Button.h" />
     <ClInclude Include="..\public\Terrain.h" />
+    <ClInclude Include="..\public\UI_Default_Panel.h" />
+    <ClInclude Include="..\public\UI_ExpDisplay.h" />
     <ClInclude Include="Client.h" />
+    <ClInclude Include="Client_Imgui.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MainApp.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\External Libraries\imgui\backends\imgui_impl_dx9.cpp" />
+    <ClCompile Include="..\..\External Libraries\imgui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="..\..\External Libraries\imgui\imgui.cpp" />
+    <ClCompile Include="..\..\External Libraries\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\..\External Libraries\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\..\External Libraries\imgui\imgui_tables.cpp" />
+    <ClCompile Include="..\..\External Libraries\imgui\imgui_widgets.cpp" />
     <ClCompile Include="..\Private\BackGround.cpp" />
+    <ClCompile Include="..\private\BackGround_2.cpp" />
+    <ClCompile Include="..\private\BackGround_3.cpp" />
+    <ClCompile Include="..\private\BackGround_4.cpp" />
     <ClCompile Include="..\private\Camera_Free.cpp" />
+    <ClCompile Include="..\private\CUI_AmmoDisplay.cpp" />
+    <ClCompile Include="..\private\CUI_Base.cpp" />
+    <ClCompile Include="..\private\Default_Menu.cpp" />
+    <ClCompile Include="..\private\Exit_Button.cpp" />
     <ClCompile Include="..\private\Level_GamePlay.cpp" />
     <ClCompile Include="..\private\Level_Loading.cpp" />
-    <ClCompile Include="..\Private\Level_Logo.cpp" />
+    <ClCompile Include="..\private\Level_Logo.cpp" />
     <ClCompile Include="..\private\Loader.cpp" />
+    <ClCompile Include="..\private\Loading_UI.cpp" />
+    <ClCompile Include="..\Private\Start_Button.cpp" />
     <ClCompile Include="..\private\Terrain.cpp" />
+    <ClCompile Include="..\private\UI_AMMOBar.cpp" />
+    <ClCompile Include="..\private\UI_Default_Panel.cpp" />
+    <ClCompile Include="..\private\UI_ExpDisplay.cpp" />
+    <ClCompile Include="..\private\UI_HPBar.cpp" />
+    <ClCompile Include="..\private\UI_HPDisplay.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="MainApp.cpp" />
   </ItemGroup>

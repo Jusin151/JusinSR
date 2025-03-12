@@ -28,9 +28,6 @@
     <Filter Include="02.GameObjects">
       <UniqueIdentifier>{fc197735-46d5-4551-ad66-96d8601cef85}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02.GameObjects\BackGround">
-      <UniqueIdentifier>{cacde4f5-7fc7-406d-9ed5-7a738becec0f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="02.GameObjects\Terrain">
       <UniqueIdentifier>{9de21c46-a0f5-43b6-8a26-1378d9bcc1aa}</UniqueIdentifier>
     </Filter>
@@ -39,6 +36,81 @@
     </Filter>
     <Filter Include="02.GameObjects\Camera\Free">
       <UniqueIdentifier>{9a579ff3-968b-4937-b82a-dcf470db3132}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI">
+      <UniqueIdentifier>{fba72f13-298e-4fff-a0c9-f7e0f36566ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Manager">
+      <UniqueIdentifier>{99fd3b07-90c4-47dc-994b-c23ffa0937e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Manager\UI_Manager">
+      <UniqueIdentifier>{c0d63515-f904-4d4c-9616-e675b485b353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\GamePlay_UI">
+      <UniqueIdentifier>{61f44fee-ddaf-48f8-9cf7-83daba36bb2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\GamePlay_UI\00.UI_PANEL">
+      <UniqueIdentifier>{4958d50b-b755-405e-b20a-ea4c99da56d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\GamePlay_UI\01.UI_HP">
+      <UniqueIdentifier>{85069806-8b3e-4ea4-bf67-ffdc00a1782c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\GamePlay_UI\02.UI_EXP">
+      <UniqueIdentifier>{bb0e3c4f-4e51-466e-8d12-e28d82ca22cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\GamePlay_UI\03.UI_AMMO">
+      <UniqueIdentifier>{723d41c7-59ff-4948-bc41-432f46d3483d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\GamePlay_UI\04.UI_MENU">
+      <UniqueIdentifier>{d5070475-8403-4ebf-9ecb-4b46d5e0e6a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\GamePlay_UI\05.UI_WEAPON">
+      <UniqueIdentifier>{bc73a85d-d6db-4ebf-9040-f2fab1b41e36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\GamePlay_UI\06.UI_DIALOGUE">
+      <UniqueIdentifier>{243758be-2338-4d7a-95d3-c5ff27d7ca16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\Logo_UI">
+      <UniqueIdentifier>{85bb928b-017d-4b9f-88f6-6d68fa56d270}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\Logo_UI\MainMenu">
+      <UniqueIdentifier>{48c7a6a5-4806-4406-aa51-e8ac3f749af0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\Logo_UI\MainMenu\Default_Menu">
+      <UniqueIdentifier>{1d26f5b1-6680-4fcc-9709-467a6016c573}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\Logo_UI\MainMenu\Start_Button">
+      <UniqueIdentifier>{58f1cbcd-081e-4ad6-95fe-27c6a615d599}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\Logo_UI\MainMenu\Exit_Button">
+      <UniqueIdentifier>{c377a721-f996-4483-a9d6-08cd888525d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\Logo_UI\BackGround">
+      <UniqueIdentifier>{cacde4f5-7fc7-406d-9ed5-7a738becec0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\Logo_UI\BackGround\BackGround_1">
+      <UniqueIdentifier>{9e680ff6-4234-49fa-bfc9-bf2b6fc6fdf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\Logo_UI\BackGround\BackGround_2">
+      <UniqueIdentifier>{f79061cb-6aec-49a9-85b4-a2f58623b4f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\Logo_UI\BackGround\BackGround_3">
+      <UniqueIdentifier>{09e657a4-bc1f-44b4-9335-79eef146e89b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\Logo_UI\BackGround\BackGround_4">
+      <UniqueIdentifier>{eb1810f4-b4f1-45e4-9781-89bd8dad713a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\UI\Loading">
+      <UniqueIdentifier>{dbaac1b6-4c94-46d3-8a10-834ed5aa515a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External Libraries">
+      <UniqueIdentifier>{58e25ebd-6fea-4455-a80e-80edacce78a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External Libraries\imgui">
+      <UniqueIdentifier>{b21a2869-3582-45c2-87f2-9b52b45297d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External Libraries\imgui\backends">
+      <UniqueIdentifier>{dd6f2ce8-7ae3-488e-b209-a054f16bd331}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -63,26 +135,110 @@
     <ClInclude Include="..\public\Client_Enum.h">
       <Filter>99.Headers</Filter>
     </ClInclude>
+    <ClInclude Include="..\public\Terrain.h">
+      <Filter>02.GameObjects\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Loader.h">
+      <Filter>01.Levels\Loading\Loader</Filter>
+    </ClInclude>
     <ClInclude Include="..\public\Level_Logo.h">
       <Filter>01.Levels\Logo</Filter>
     </ClInclude>
     <ClInclude Include="..\public\Level_Loading.h">
       <Filter>01.Levels\Loading</Filter>
     </ClInclude>
-    <ClInclude Include="..\public\Loader.h">
-      <Filter>01.Levels\Loading\Loader</Filter>
-    </ClInclude>
     <ClInclude Include="..\public\Level_GamePlay.h">
       <Filter>01.Levels\GamePlay</Filter>
     </ClInclude>
     <ClInclude Include="..\public\BackGround.h">
-      <Filter>02.GameObjects\BackGround</Filter>
+      <Filter>02.GameObjects\UI\Logo_UI\BackGround\BackGround_1</Filter>
     </ClInclude>
-    <ClInclude Include="..\public\Terrain.h">
-      <Filter>02.GameObjects\Terrain</Filter>
+    <ClInclude Include="..\public\CUI_Manager.h">
+      <Filter>98. Manager\UI_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\UI_HPDisplay.h">
+      <Filter>02.GameObjects\UI\GamePlay_UI\01.UI_HP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\CUI_WeaponIcon.h">
+      <Filter>02.GameObjects\UI\GamePlay_UI\05.UI_WEAPON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\CUI_AmmoDisplay.h">
+      <Filter>02.GameObjects\UI\GamePlay_UI\03.UI_AMMO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\CUI_Menu.h">
+      <Filter>02.GameObjects\UI\GamePlay_UI\04.UI_MENU</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\CUI_Dialogue.h">
+      <Filter>02.GameObjects\UI\GamePlay_UI\06.UI_DIALOGUE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\UI_ExpDisplay.h">
+      <Filter>02.GameObjects\UI\GamePlay_UI\02.UI_EXP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\UI_Default_Panel.h">
+      <Filter>02.GameObjects\UI\GamePlay_UI\00.UI_PANEL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Start_Button.h">
+      <Filter>02.GameObjects\UI\Logo_UI\MainMenu\Start_Button</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Exit_Button.h">
+      <Filter>02.GameObjects\UI\Logo_UI\MainMenu\Exit_Button</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Loading_UI.h">
+      <Filter>02.GameObjects\UI\Loading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\UI_HPBar.h">
+      <Filter>02.GameObjects\UI\GamePlay_UI\01.UI_HP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\UI_EXPBar.h">
+      <Filter>02.GameObjects\UI\GamePlay_UI\02.UI_EXP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\UI_AMMOBar.h">
+      <Filter>02.GameObjects\UI\GamePlay_UI\03.UI_AMMO</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Imgui.h">
+      <Filter>99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\External Libraries\imgui\backends\imgui_impl_dx9.h">
+      <Filter>External Libraries\imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\External Libraries\imgui\backends\imgui_impl_win32.h">
+      <Filter>External Libraries\imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\External Libraries\imgui\imgui_internal.h">
+      <Filter>External Libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\External Libraries\imgui\imstb_rectpack.h">
+      <Filter>External Libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\External Libraries\imgui\imstb_textedit.h">
+      <Filter>External Libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\External Libraries\imgui\imstb_truetype.h">
+      <Filter>External Libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\External Libraries\imgui\imconfig.h">
+      <Filter>External Libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\External Libraries\imgui\imgui.h">
+      <Filter>External Libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\BackGround_2.h">
+      <Filter>02.GameObjects\UI\Logo_UI\BackGround\BackGround_2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\BackGround_3.h">
+      <Filter>02.GameObjects\UI\Logo_UI\BackGround\BackGround_3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\BackGround_4.h">
+      <Filter>02.GameObjects\UI\Logo_UI\BackGround\BackGround_4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Default_Menu.h">
+      <Filter>02.GameObjects\UI\Logo_UI\MainMenu\Default_Menu</Filter>
     </ClInclude>
     <ClInclude Include="..\public\Camera_Free.h">
       <Filter>02.GameObjects\Camera\Free</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\CUI_Base.h">
+      <Filter>02.GameObjects\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -105,26 +261,89 @@
     <ClCompile Include="MainApp.cpp">
       <Filter>00.MainApp</Filter>
     </ClCompile>
-    <ClCompile Include="..\Private\Level_Logo.cpp">
+    <ClCompile Include="..\private\Terrain.cpp">
+      <Filter>02.GameObjects\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Loader.cpp">
+      <Filter>01.Levels\Loading\Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Level_Logo.cpp">
       <Filter>01.Levels\Logo</Filter>
     </ClCompile>
     <ClCompile Include="..\private\Level_Loading.cpp">
       <Filter>01.Levels\Loading</Filter>
     </ClCompile>
-    <ClCompile Include="..\private\Loader.cpp">
-      <Filter>01.Levels\Loading\Loader</Filter>
-    </ClCompile>
     <ClCompile Include="..\private\Level_GamePlay.cpp">
       <Filter>01.Levels\GamePlay</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\BackGround.cpp">
-      <Filter>02.GameObjects\BackGround</Filter>
+      <Filter>02.GameObjects\UI\Logo_UI\BackGround\BackGround_1</Filter>
     </ClCompile>
-    <ClCompile Include="..\private\Terrain.cpp">
-      <Filter>02.GameObjects\Terrain</Filter>
+    <ClCompile Include="..\private\UI_ExpDisplay.cpp">
+      <Filter>02.GameObjects\UI\GamePlay_UI\02.UI_EXP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\UI_Default_Panel.cpp">
+      <Filter>02.GameObjects\UI\GamePlay_UI\00.UI_PANEL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Start_Button.cpp">
+      <Filter>02.GameObjects\UI\Logo_UI\MainMenu\Start_Button</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\External Libraries\imgui\backends\imgui_impl_dx9.cpp">
+      <Filter>External Libraries\imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\External Libraries\imgui\backends\imgui_impl_win32.cpp">
+      <Filter>External Libraries\imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\External Libraries\imgui\imgui_tables.cpp">
+      <Filter>External Libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\External Libraries\imgui\imgui_widgets.cpp">
+      <Filter>External Libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\External Libraries\imgui\imgui_draw.cpp">
+      <Filter>External Libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\External Libraries\imgui\imgui.cpp">
+      <Filter>External Libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\External Libraries\imgui\imgui_demo.cpp">
+      <Filter>External Libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\BackGround_2.cpp">
+      <Filter>02.GameObjects\UI\Logo_UI\BackGround\BackGround_2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\BackGround_3.cpp">
+      <Filter>02.GameObjects\UI\Logo_UI\BackGround\BackGround_3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\BackGround_4.cpp">
+      <Filter>02.GameObjects\UI\Logo_UI\BackGround\BackGround_4</Filter>
     </ClCompile>
     <ClCompile Include="..\private\Camera_Free.cpp">
       <Filter>02.GameObjects\Camera\Free</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Default_Menu.cpp">
+      <Filter>02.GameObjects\UI\Logo_UI\MainMenu\Default_Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Loading_UI.cpp">
+      <Filter>02.GameObjects\UI\Loading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\CUI_AmmoDisplay.cpp">
+      <Filter>02.GameObjects\UI\GamePlay_UI\03.UI_AMMO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\UI_AMMOBar.cpp">
+      <Filter>02.GameObjects\UI\GamePlay_UI\03.UI_AMMO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Exit_Button.cpp">
+      <Filter>02.GameObjects\UI\Logo_UI\MainMenu\Exit_Button</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\UI_HPDisplay.cpp">
+      <Filter>02.GameObjects\UI\GamePlay_UI\01.UI_HP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\UI_HPBar.cpp">
+      <Filter>02.GameObjects\UI\GamePlay_UI\01.UI_HP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\CUI_Base.cpp">
+      <Filter>02.GameObjects\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

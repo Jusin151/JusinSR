@@ -201,6 +201,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
         }
         break;
+
+	case WM_KEYDOWN:
+	{
+		if (VK_ESCAPE == wParam)
+		{
+			PostQuitMessage(0);
+		}
+	}
     case WM_PAINT:
         {
             PAINTSTRUCT ps;

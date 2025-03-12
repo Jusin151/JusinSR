@@ -16,8 +16,11 @@ public:
 	virtual void Update(_float fTimeDelta) override;
 	virtual HRESULT Render() override;
 
+	HRESULT Ready_Layer_BackGround();
+	HRESULT Ready_Layer_Menu();
+
 private:
-	HRESULT Ready_Layer_BackGround(const _wstring& strLayerTag);
+
 
 public:
 	static CLevel_Logo* Create(LPDIRECT3DDEVICE9 pGraphic_Device);

@@ -2,24 +2,26 @@
 
 #include "Client_Defines.h"
 #include "GameObject.h"
+#include "CUI_Base.h"
 
 BEGIN(Engine)
 class CTexture;
 class CTransform;
-class CVIBuffer_Rect;
+class CVIBuffer_Rect;  // UI는 사각형으로
 END
 
 BEGIN(Client)
 
-class CBackGround final : public CGameObject
+// 캐릭터 
+class CBackGround final : public CUI_Base
 {
 private:
 	CBackGround(LPDIRECT3DDEVICE9 pGraphic_Device);
 	CBackGround(const CBackGround& Prototype);
 	virtual ~CBackGround() = default;
 
-public:	
-	virtual HRESULT Initialize_Prototype()override;	
+public:
+	virtual HRESULT Initialize_Prototype()override;
 	virtual HRESULT Initialize(void* pArg)override;
 	virtual void Priority_Update(_float fTimeDelta)override;
 	virtual void Update(_float fTimeDelta)override;
@@ -27,18 +29,22 @@ public:
 	virtual HRESULT Render()override;
 
 private:
-	CTexture*				m_pTextureCom = { nullptr };
-	CTransform*				m_pTransformCom = { nullptr };
-	CVIBuffer_Rect*			m_pVIBufferCom = { nullptr };
+	CTexture* m_Back_pTextureCom{};
+	CTransform* m_Back_pTransformCom{};
+	CVIBuffer_Rect* m_Back_pVIBufferCom{};  // UI는 사각형이므로 Rect 버퍼 사용
+
+	UI_Parent_Desc m_BackGround_INFO{};
 
 private:
 	HRESULT Ready_Components();
-	
+
 
 public:
 	static CBackGround* Create(LPDIRECT3DDEVICE9 pGraphic_Device);
 	virtual CGameObject* Clone(void* pArg) override;
 	virtual void Free();
+
 };
+
 
 END

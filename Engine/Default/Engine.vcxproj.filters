@@ -76,6 +76,15 @@
     <ClInclude Include="..\public\Camera.h">
       <Filter>02.GameObject\Camera</Filter>
     </ClInclude>
+    <ClInclude Include="..\Public\Collider2D.h">
+      <Filter>04.Components\Collider\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CColider3D.h">
+      <Filter>04.Components\Collider\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\PoolManager.h">
+      <Filter>07.Pool</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="99.Headers">
@@ -147,6 +156,33 @@
     <Filter Include="02.GameObject\Camera">
       <UniqueIdentifier>{818845ae-d1f4-4af6-8117-3b38123510e2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="04.Components\Collider">
+      <UniqueIdentifier>{4168ca55-e19e-46a9-88ea-542146ae3d0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Components\Collider\2D">
+      <UniqueIdentifier>{0c2ecd14-49cb-46aa-9913-76b1011b1c5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Components\Collider\3D">
+      <UniqueIdentifier>{c5647e0f-964b-4465-b1ec-dfcd6ef2e02a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Components\Collider\2D\Rectangle">
+      <UniqueIdentifier>{05213e64-7349-4086-8a05-ccb8200c4517}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Components\Collider\3D\Cube">
+      <UniqueIdentifier>{7c5857e9-9040-4b7c-bad1-fb53d1af852e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Components\Collider\3D\Sphere">
+      <UniqueIdentifier>{70f316bc-bb48-4c54-bc3f-01b163db578a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Components\Collider\2D\Circle">
+      <UniqueIdentifier>{2436b0f8-00cc-43d2-bfbf-e2216baf4eb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06.Sound">
+      <UniqueIdentifier>{8be1bb1c-fa11-4209-833e-b4b220c0eb80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="07.Pool">
+      <UniqueIdentifier>{f91d3988-c91a-4823-9b7f-9844bedec818}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Private\Base.cpp">
@@ -205,6 +241,15 @@
     </ClCompile>
     <ClCompile Include="..\private\Camera.cpp">
       <Filter>02.GameObject\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider2D.cpp">
+      <Filter>04.Components\Collider\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CColider3D.cpp">
+      <Filter>04.Components\Collider\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\PoolManager.cpp">
+      <Filter>07.Pool</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
