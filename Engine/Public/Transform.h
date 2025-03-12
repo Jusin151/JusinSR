@@ -28,6 +28,11 @@ public:
 		return *reinterpret_cast<const _float3*>(&m_WorldMatrix.m[eState][0]);
 	}
 
+	const _float4x4* Get_WorldMatrix_Inverse() {
+	
+		return D3DXMatrixInverse(&m_WorldMatrixInverse, nullptr, &m_WorldMatrix);
+	}
+
 	void Set_State(TRANSFORMSTATE eState, const _float3& vState) {
 		memcpy(&m_WorldMatrix.m[eState][0], &vState, sizeof vState);
 	}
@@ -46,26 +51,11 @@ public:
 	void Go_Backward(_float fTimeDelta);
 	void Go_Left(_float fTimeDelta);
 	void Go_Right(_float fTimeDelta);
-	void Go_Up(_float fTimeDelta);
-	void Go_Down(_float fTimeDelta);
 
 	void LookAt(const _float3& vTargetPos);
 	void Chase(const _float3& vTargetPos, _float fTimeDelta, _float fMinDistance = 0.1f);
 	void Turn(const _float3& vAxis, _float fTimeDelta);
 	void Rotation(const _float3& vAxis, _float fRadian);
-
-public:
-	void Set_Scale(_float x, _float y, _float z);
-
-	const _float4x4* Get_WorldMatrix_Inverse() {
-
-		return D3DXMatrixInverse(&m_WorldMatrixInverse, nullptr, &m_WorldMatrix);
-	}
-
-	_float4x4 Get_WorldMat()
-	{
-		return m_WorldMatrix;
-	}
 
 private:
 	_float4x4				m_WorldMatrix = {};

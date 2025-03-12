@@ -39,11 +39,6 @@ HRESULT CLevel_Manager::Render()
     return S_OK;
 }
 
-void CLevel_Manager::Clear(_uint iLevelIndex)
-{
-    m_pCurrentLevel->Free();
-}
-
 CLevel_Manager* CLevel_Manager::Create()
 {
 	return new CLevel_Manager();

@@ -10,6 +10,7 @@ CTerrain::CTerrain(LPDIRECT3DDEVICE9 pGraphic_Device)
 CTerrain::CTerrain(const CTerrain& Prototype)
     : CGameObject { Prototype }
 {
+
 }
 
 HRESULT CTerrain::Initialize_Prototype()
@@ -119,7 +120,6 @@ CGameObject* CTerrain::Clone(void* pArg)
 {	
 	CTerrain* pInstance = new CTerrain(*this);
 
-
 	if (FAILED(pInstance->Initialize(pArg)))
 	{
 		MSG_BOX("Failed to Created : CTerrain");
@@ -136,4 +136,5 @@ void CTerrain::Free()
 	Safe_Release(m_pTransformCom);
 	Safe_Release(m_pVIBufferCom);	
 	Safe_Release(m_pTextureCom);
+
 }

@@ -34,7 +34,6 @@ HRESULT CCamera_Free::Initialize(void* pArg)
 	if (FAILED(__super::Initialize(&Desc)))
 		return E_FAIL;
 
-	//SetCursorPos(g_iWinSizeX / 2, g_iWinSizeY / 2);
 	GetCursorPos(&m_ptOldMousePos);
 	ScreenToClient(g_hWnd, &m_ptOldMousePos);
 
@@ -77,7 +76,6 @@ void CCamera_Free::Priority_Update(_float fTimeDelta)
 	{
 		m_pTransformCom->Turn(m_pTransformCom->Get_State(CTransform::STATE_RIGHT), fTimeDelta * iMouseMove * m_fMouseSensor);
 	}
-	
 
 	
 

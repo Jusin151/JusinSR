@@ -18,7 +18,6 @@ public:
 	HRESULT Change_Level(_uint iLevelIndex, class CLevel* pNewLevel);
 	void Update(_float fTimeDelta);
 	HRESULT Render();
-	void Clear(_uint iLevelIndex);
 
 
 private:

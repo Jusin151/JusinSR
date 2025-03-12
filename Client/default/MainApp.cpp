@@ -4,8 +4,6 @@
 #include "Level_Logo.h"
 #include "Level_Loading.h"
 
-#include "Loading_UI.h"
-
 CMainApp::CMainApp()
 	: m_pGameInstance{ CGameInstance::Get_Instance() }
 {
@@ -29,13 +27,6 @@ HRESULT CMainApp::Initialize()
 
 	if (FAILED(Ready_Default_Setting()))
 		return E_FAIL;
-
-	if (FAILED(Ready_Prototype_GameObject()))
-		return E_FAIL;
-
-	if (FAILED(Ready_Prototype_Component()))
-		return E_FAIL;
-
 
 	/* 최초 보여줄 레벨을 할당하자. */
 	if (FAILED(Open_Level(LEVEL_LOGO)))
@@ -71,7 +62,6 @@ HRESULT CMainApp::Ready_Component_For_Static()
 		CTransform::Create(m_pGraphic_Device))))
 		return E_FAIL;
 
-
 	return S_OK;
 }
 
@@ -80,19 +70,6 @@ HRESULT CMainApp::Open_Level(LEVEL eLevelID)
 	if (FAILED(m_pGameInstance->Change_Level(LEVEL_LOADING, CLevel_Loading::Create(m_pGraphic_Device, eLevelID))))
 		return E_FAIL;
 
-	return S_OK;
-}
-
-HRESULT CMainApp::Ready_Prototype_GameObject()
-{
-	
-	
-
-	return S_OK;
-}
-
-HRESULT CMainApp::Ready_Prototype_Component()
-{
 	return S_OK;
 }
 

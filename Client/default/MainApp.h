@@ -28,8 +28,6 @@ private:
 	HRESULT Ready_Component_For_Static();
 	HRESULT Open_Level(LEVEL eLevelID);
 
-	HRESULT Ready_Prototype_GameObject();
-	HRESULT Ready_Prototype_Component();
 public:
 	static CMainApp* Create();
 	virtual void Free() override;

@@ -1,6 +1,6 @@
 ﻿#include "Level_Loading.h"
 
-#include "Loading_UI.h"
+
 #include "Level_GamePlay.h"
 #include "Level_Logo.h"
 #include "Loader.h"
@@ -19,12 +19,6 @@ HRESULT CLevel_Loading::Initialize(LEVEL eNextLevelID)
 
 	/* 로딩레벨 자체에 필요한 객체를 생성한다. */
 	/* 배경, 로딩바, 버튼, font */
-
-
-
-	if (FAILED(Ready_Loading()))
- 		return E_FAIL;
-
 
 	/* 로딩의 역할(다음레벨에 필요한 자원(Resource)(텍스쳐, 모델, 사운드 등등등 )을 생성하는)을 
 	수행할 로더객체를 생성한다. */
@@ -67,39 +61,6 @@ void CLevel_Loading::Update(_float fTimeDelta)
 HRESULT CLevel_Loading::Render()
 {
 	m_pLoader->Output_LoadingText();
-
-	return S_OK;
-}
-
-HRESULT CLevel_Loading::Ready_Loading()
-{
-
-	if (FAILED(m_pGameInstance->Add_Prototype(LEVEL_LOADING,
-		TEXT("Prototype_Component_Texture_Loading_UI"),
-		CTexture::Create(m_pGraphic_Device,
-			TEXT("../../Resources/Textures/UI/Loading/bg_entering.png"), 1))))
-		return E_FAIL;
-
-	if (FAILED(m_pGameInstance->Add_Prototype(LEVEL_LOADING,
-		TEXT("Prototype_Component_VIBuffer_Loading_UI"),
-		CVIBuffer_Rect::Create(m_pGraphic_Device))))
-		return E_FAIL;
-
-
-	if (FAILED(m_pGameInstance->Add_Prototype(LEVEL_LOADING,
-		TEXT("Prototype_Component_Transform_Loading_UI"),
-		CTransform::Create(m_pGraphic_Device))))
-		return E_FAIL;
-
-	if (FAILED(m_pGameInstance->Add_Prototype(LEVEL_LOADING,
-		TEXT("Prototype_GameObject_Loading_UI"),
-		CLoading_UI::Create(m_pGraphic_Device))))
-		return E_FAIL;
-
-	if (FAILED(m_pGameInstance->Add_GameObject(LEVEL_LOADING, TEXT("Prototype_GameObject_Loading_UI"),
-		LEVEL_LOADING, TEXT("Layer_Loading_UI"))))
-		return E_FAIL;
-
 
 	return S_OK;
 }
